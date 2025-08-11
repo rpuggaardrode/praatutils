@@ -8,7 +8,7 @@ relatively hassle-free access to some of the signal processing of
 [Praat](https://fon.hum.uva.nl/praat).
 
 There are already tools in R to help interact with Praat. Praat shows up
-in four package descriptions on
+in five package descriptions on
 [CRAN](https://cran.r-project.org/web/packages/available_packages_by_name.html):
 [`textgRid`](https://cran.r-project.org/web/packages/textgRid/index.html)
 and
@@ -27,12 +27,14 @@ objects.
 These are all great tools, but to the extent that they provide access to
 Praat’s extensive and excellent signal processing tools, they require
 files to be generated and saved in Praat, or they require pre-existing
-Praat scripts. \[`speakr`\] calls Praat through a shell, which is a
-method that I realy on very often, but which tends to be a bit fragile
-across operating systems, which can cause trouble for general-purpose
-pipelines. I suspect that what many users *really* want is the ability
-to call Praat’s source code from R and get outputs that are
-interpretable from R – similar to how the library
+Praat scripts.
+[`speakr`](https://cran.r-project.org/web/packages/speakr/index.html)
+calls Praat through a shell, which is a method that I rely on very
+often, but which tends to be a bit fragile across operating systems,
+which can cause trouble for general-purpose pipelines. I suspect that
+what many users *really* want is the ability to call Praat’s source code
+from R and get outputs that are interpretable from R – similar to how
+the library
 [`wrassp`](https://cran.r-project.org/web/packages/wrassp/index.html)
 provides direct access to the signal processing library ASSP by calling
 the underlying C code.
@@ -59,7 +61,7 @@ familiar objects like data frames. This is mainly done via `parselmouth`
 and is made possible by the R library
 [`reticulate`](https://www.r-bloggers.com/2022/04/getting-started-with-python-using-r-and-reticulate/)
 which manages interfaces between R and Python. If nothing fails, this
-should mean that the users doesn’t need to point R towards a specific
+should mean that the user doesn’t need to point R towards a specific
 installation of Python or a specific installation of Praat – when
 `praatutils` is first called, `reticulate` makes sure that everything is
 installed and can be called, installs anything that’s missing, and this
