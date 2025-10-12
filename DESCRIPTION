@@ -1,11 +1,11 @@
 Package: praatutils
 Type: Package
 Title: Utilities for calling 'Praat' from R
-Version: 0.0.2
+Version: 0.0.3
 Authors@R: c(
     person(
       "Rasmus", "Puggaard-Rode",
-      email = "r.puggaard@phonetik.uni-muenchen.de",
+      email = "rasmus.puggaard-rode@ling-phil.ox.ac.uk",
       role = c("aut", "cre")
     )
   )
@@ -16,7 +16,7 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/rpuggaardrode/praatutils
 BugReports: https://github.com/rpuggaardrode/praatutils/issues
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
 Imports: 
     reticulate,
     utils,
