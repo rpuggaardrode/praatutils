@@ -4,13 +4,15 @@
 \alias{saveAsWav}
 \title{Save sound file as WAV}
 \usage{
-saveAsWav(file_in, file_out)
+saveAsWav(file_in, file_out = NULL)
 }
 \arguments{
 \item{file_in}{String giving the path to a sound file that can be read by
 Praat.}
 
-\item{file_out}{String giving the output path.}
+\item{file_out}{String giving the output path. Default is `NULL`, in which
+case the output path will be identical to `file_in` except with the `.wav`
+extension.}
 }
 \value{
 Used for side effects

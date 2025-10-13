@@ -1,7 +1,7 @@
 Package: praatutils
 Type: Package
 Title: Utilities for calling 'Praat' from R
-Version: 0.0.3
+Version: 0.0.4
 Authors@R: c(
     person(
       "Rasmus", "Puggaard-Rode",
