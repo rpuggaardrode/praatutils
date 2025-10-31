@@ -30,6 +30,7 @@ readTextGrid <- function(filename, ext = '.TextGrid') {
     tmp <- p$praat$call(tg, 'List', 0, 3, 1, 0) |>
       utils::read.table(text = _, header = TRUE, sep = '\t')
     tmp <- cbind(file = rep(f, nrow(tmp)), tmp)
+    tmp$id <- 1:nrow(tmp)
     out <- rbind(out, tmp)
   }
 

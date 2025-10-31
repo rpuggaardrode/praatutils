@@ -37,11 +37,16 @@ addTextGridLabels <- function(signal, TextGrid,
     tgFile <- TextGrid[which(TextGrid$file == f),]
     for (x in tiers) {
       sigFile[,x] <- NA
+      idCol <- paste0(x, '_id')
+      sigFile[,idCol] <- NA
       filt <- tgFile[which(tgFile$tier == x),]
       for (i in 1:nrow(filt)) {
         sigFile[which(sigFile$t >= filt$tmin[i] &
                         sigFile$t <= filt$tmax[i]),x] <-
           filt$text[i]
+        sigFile[which(sigFile$t >= filt$tmin[i] &
+                        sigFile$t <= filt$tmax[i]),idCol] <-
+          filt$id[i]
       }
     }
     if ('out' %in% ls()) {
