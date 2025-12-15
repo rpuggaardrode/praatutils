@@ -1,3 +1,8 @@
+## Version 0.0.6
+* Improved, safer handling of global environment variables on load.
+* `saveAsWav()` now allows for other file edits, such as sampling rate and
+conversion to mono.
+
 ## Version 0.0.5
 * The data frame output from `readTextGrid()` now contains an `id` column, 
 which is also transfered to data frames created with `addTextGridLabels()`.

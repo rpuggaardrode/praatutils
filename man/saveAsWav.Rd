@@ -4,7 +4,13 @@
 \alias{saveAsWav}
 \title{Save sound file as WAV}
 \usage{
-saveAsWav(file_in, file_out = NULL)
+saveAsWav(
+  file_in,
+  file_out = NULL,
+  mono = FALSE,
+  resamplingFrequency = NULL,
+  resamplingPrecision = 50
+)
 }
 \arguments{
 \item{file_in}{String giving the path to a sound file that can be read by
@@ -13,12 +19,23 @@ Praat.}
 \item{file_out}{String giving the output path. Default is `NULL`, in which
 case the output path will be identical to `file_in` except with the `.wav`
 extension.}
+
+\item{mono}{Logical; should the sound file be converted to mono? Default
+is `FALSE`.}
+
+\item{resamplingFrequency}{Numeric; if the file should be resample, which
+sampling frequency should be used? Default is `NULL`, in which case the
+sound is not resampled.}
+
+\item{resamplingPrecision}{Numeric; interpolation depth for resampling in
+units of samples. Default is `50`.}
 }
 \value{
 Used for side effects
 }
 \description{
-Save a sound file of any Praat-readable format as a wave file.
+Save a sound file of any Praat-readable format as a wave file, optionally
+converting to mono and/or resampling to a different frequency.
 }
 \examples{
 \dontrun{
