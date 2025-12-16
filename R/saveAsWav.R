@@ -20,11 +20,10 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' datapath <- system.file('extdata', package='praatutils')
 #' soundFile <- paste0(datapath, '/1.mp3')
-#' saveAsWav(soundFile, '1_asWav.wav')
-#' }
+#' outFile <- file.path(tempdir(), 'asWav.wav')
+#' saveAsWav(soundFile, outFile)
 saveAsWav <- function(file_in, file_out = NULL, mono = FALSE,
                       resamplingFrequency = NULL, resamplingPrecision = 50) {
   if (is.null(file_out)) {

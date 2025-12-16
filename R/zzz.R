@@ -7,4 +7,5 @@
   }
   Sys.setenv('RETICULATE_PYTHON' = 'managed')
   reticulate::py_require('praat-parselmouth')
+  p <<- reticulate::import('parselmouth', delay_load = TRUE)
 }

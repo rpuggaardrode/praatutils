@@ -1,3 +1,6 @@
+## Version 0.0.7
+* Now with global delayed loading of `parselmouth`.
+
 ## Version 0.0.6
 * Improved, safer handling of global environment variables on load.
 * `saveAsWav()` now allows for other file edits, such as sampling rate and

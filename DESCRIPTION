@@ -1,14 +1,13 @@
 Package: praatutils
 Type: Package
-Title: Utilities for calling 'Praat' from R
-Version: 0.0.6
-Authors@R: c(
-    person(
+Title: Utilities for Calling 'Praat' from R
+Version: 0.0.7
+Authors@R: 
+  person(
       "Rasmus", "Puggaard-Rode",
       email = "rasmus.puggaard-rode@ling-phil.ox.ac.uk",
-      role = c("aut", "cre")
-    )
-  )
+      role = c("aut", "cre", "cph"),
+             comment = c(ORCID = "0000-0003-4522-9987"))
 Description: Utilities for calling the speech analysis software 'Praat' from R by using the 'Python' interface 'parselmouth' through 'reticulate'.
 License: GPL (>= 3)
 Encoding: UTF-8

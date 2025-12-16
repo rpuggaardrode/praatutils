@@ -38,9 +38,8 @@ Save a sound file of any Praat-readable format as a wave file, optionally
 converting to mono and/or resampling to a different frequency.
 }
 \examples{
-\dontrun{
 datapath <- system.file('extdata', package='praatutils')
 soundFile <- paste0(datapath, '/1.mp3')
-saveAsWav(soundFile, '1_asWav.wav')
-}
+outFile <- file.path(tempdir(), 'asWav.wav')
+saveAsWav(soundFile, outFile)
 }
